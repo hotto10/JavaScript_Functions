@@ -21,8 +21,8 @@ printOdds(-10);
 
 //Exercise 2
 function checkAge(name, age) {
-    let oldEnough = 'Yay ${name}! You are old enough to drive!!';
-    let tooYoung = 'Thats too bad ${name}, you need to wait ${} year(s) until you can drive.';
+    let oldEnough = `Yay ${name}! You are old enough to drive!!`;
+    let tooYoung = `Thats too bad ${name}, you need to wait ${} year(s) until you can drive.`;
 
     if (age < 16) {
         console.log(tooYoung);
@@ -54,10 +54,10 @@ function checkQuadrant(x,y){
     }
 
 }
-checkQuadrant(1, 1);
-checkQuadrant(-1, 1);
-checkQuadrant(-1, -1);
-checkQuadrant(1, -1);
+console.log(checkQuadrant(1, 1));
+console.log(checkQuadrant(-1, 1));
+console.log(checkQuadrant(-1, -1));
+console.log(checkQuadrant(1, -1));
 //Exercise 4
 function isValidTriangle(a, b, c){
     return a + b >= c && a + c >= b && b + c >= a
@@ -78,10 +78,10 @@ function checkTriangle(a, b, c){
     }
 }
 
-checkTriangle(2, 3, 4);
-checkTriangle(2, 2, 2);
-checkTriangle(1, 2, 2);
-checkTriangle(1, 1, 2);
+console.log(checkTriangle(2, 3, 4));
+console.log(checkTriangle(2, 2, 2));
+console.log(checkTriangle(1, 2, 2));
+console.log(checkTriangle(1, 1, 2));
 
 //Exercise 5
 function dataUsageFeedback(planLimit, day, usage) {
@@ -92,8 +92,8 @@ function dataUsageFeedback(planLimit, day, usage) {
     let projectedUsage = remainingDays * currentAvg;
     let statusMsg;
 
-    console.log('{day} day(s) used, ${remainingDays} day(s) remaining');
-    console.log('Average projected used, ${projectedAvg} GB/day');
+    console.log(`{day} day(s) used, ${remainingDays} day(s) remaining`);
+    console.log(`Average projected used, ${projectedAvg} GB/day`);
 
     if(currentAvg > projectedAvg){
         statusMsg = "Exceeding";
@@ -103,7 +103,7 @@ function dataUsageFeedback(planLimit, day, usage) {
         statusMsg = "AT";
     }
 
-    console.log('You are ${statusMsg} your average daily use (${currentAvg} GB/day), continuing this usage will end up using ${planLimit - (usage + projectedUsage)} GB from your data limit.');
+    console.log(`You are ${statusMsg} your average daily use (${currentAvg} GB/day), continuing this usage will end up using ${planLimit - (usage + projectedUsage)} GB from your data limit.`);
 
 
 }
